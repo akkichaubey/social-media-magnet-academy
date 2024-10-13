@@ -1,0 +1,108 @@
+.pt-180 {
+  padding-top: get-vw(40px, 180px);
+}
+.pb-180 {
+  padding-bottom: get-vw(40px, 180px);
+}
+
+.pt-150 {
+  padding-top: get-vw(35px, 150px);
+}
+.pb-150 {
+  padding-bottom: get-vw(35px, 150px);
+}
+
+.pt-135 {
+  padding-top: get-vw(35px, 135px);
+}
+.pb-140 {
+  padding-bottom: get-vw(35px, 135px);
+}
+
+.pt-70 {
+  padding-top: get-vw(30px, 70px);
+}
+.pb-70 {
+  padding-bottom: get-vw(30px, 70px);
+}
+
+.pt-35 {
+  padding-top: get-vw(25px, 35px);
+}
+.pb-35 {
+  padding-bottom: get-vw(25px, 35px);
+}
+
+.gap-x-30 {
+  row-gap: 30px;
+}
+
+.brd-55 {
+  border-radius: get-vw(20px, 55px);
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.img-overlay {
+  background: no-repeat center / cover;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $secondary;
+    opacity: 0.85;
+  }
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.img-cover {
+  position: relative;
+  padding-bottom: 100%;
+  :is(img, video) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.list {
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -38px;
+    @include breakpoint(max, $media-md) {
+      margin: 0 -20px;
+    }
+    @include breakpoint(max, $media-sm) {
+      margin: 0 -15px;
+    }
+    li {
+      padding: 0 38px;
+      @include breakpoint(max, $media-md) {
+        padding: 0 20px;
+      }
+      @include breakpoint(max, $media-sm) {
+        padding: 0 15px;
+      }
+    }
+  }
+}

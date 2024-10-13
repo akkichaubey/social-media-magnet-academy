@@ -1,0 +1,100 @@
+.hero-banner {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: no-repeat center / cover;
+  padding: 200px 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  @include breakpoint(max, $media-lg) {
+    padding-bottom: 100px;
+  }
+  .water-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .container {
+    max-width: 1530px;
+  }
+  .banner-info {
+    text-align: center;
+    .logo {
+      width: 100%;
+      margin: 0 auto;
+      max-width: get-vw(150px, 407px);
+      padding-bottom: get-vw(25px, 64px);
+      a {
+        display: inline-block;
+        img {
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    .banner-title {
+      color: $white;
+      font-family: $font-sans;
+      text-transform: uppercase;
+    }
+    p {
+      color: $white;
+      line-height: 1.25;
+    }
+    .description {
+      padding-top: 20px;
+    }
+    .btn-wrap {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 38px;
+    }
+    .author {
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 13px;
+      .author-img {
+        overflow: hidden;
+        border-radius: 100px;
+        width: get-vw(50px, 70px);
+        height: get-vw(50px, 70px);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .name-date {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 28px;
+        span {
+          font-size: 20px;
+          line-height: 1.3;
+          color: $white;
+          position: relative;
+          + span {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -17px;
+              bottom: 0;
+              width: 9px;
+              height: 9px;
+              border-radius: 100px;
+              margin: auto 0;
+              background: currentColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
