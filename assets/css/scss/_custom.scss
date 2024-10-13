@@ -15,8 +15,15 @@
 .pt-135 {
   padding-top: get-vw(35px, 135px);
 }
-.pb-140 {
+.pb-135 {
   padding-bottom: get-vw(35px, 135px);
+}
+
+.pt-120 {
+  padding-top: get-vw(35px, 120px);
+}
+.pb-120 {
+  padding-bottom: get-vw(35px, 120px);
 }
 
 .pt-70 {
@@ -24,6 +31,13 @@
 }
 .pb-70 {
   padding-bottom: get-vw(30px, 70px);
+}
+
+.pt-50 {
+  padding-top: get-vw(30px, 50px);
+}
+.pb-50 {
+  padding-bottom: get-vw(30px, 50px);
 }
 
 .pt-35 {

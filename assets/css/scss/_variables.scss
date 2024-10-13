@@ -118,14 +118,8 @@ $media-xl-min: "1201";
 // => @media (min-width: 1281px)
 $media-xxl-min: "1281";
 
-$font-sans: "Arial Rounded MT", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-arial: "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-arial-narrow: "Arial Narrow", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-sans: "Arial Rounded MT", serif;
+$font-arial: "Arial", serif;
+$font-arial-narrow: "Arial Narrow", serif;
 
 @import "./mixins";

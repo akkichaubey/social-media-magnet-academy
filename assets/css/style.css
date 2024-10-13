@@ -76,7 +76,7 @@ input[type=submit] {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial Rounded MT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial Rounded MT", serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   width: 100%;
@@ -166,7 +166,7 @@ select {
   outline: none;
   resize: none;
   box-shadow: none;
-  font-family: "Arial Rounded MT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial Rounded MT", serif;
 }
 
 strong {
@@ -195,7 +195,7 @@ h6 {
   color: #032551;
   margin: 0;
   font-weight: 700;
-  font-family: "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial", serif;
 }
 
 ul {
@@ -523,8 +523,16 @@ html.lenis body {
   padding-top: clamp(35px, 7.03125vw, 135px);
 }
 
-.pb-140 {
+.pb-135 {
   padding-bottom: clamp(35px, 7.03125vw, 135px);
+}
+
+.pt-120 {
+  padding-top: clamp(35px, 6.25vw, 120px);
+}
+
+.pb-120 {
+  padding-bottom: clamp(35px, 6.25vw, 120px);
 }
 
 .pt-70 {
@@ -533,6 +541,14 @@ html.lenis body {
 
 .pb-70 {
   padding-bottom: clamp(30px, 3.6458333333vw, 70px);
+}
+
+.pt-50 {
+  padding-top: clamp(30px, 2.6041666667vw, 50px);
+}
+
+.pb-50 {
+  padding-bottom: clamp(30px, 2.6041666667vw, 50px);
 }
 
 .pt-35 {
@@ -682,7 +698,7 @@ html.lenis body {
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
-  font-family: "Arial Narrow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial Narrow", serif;
   display: inline-block;
   color: #fff;
   letter-spacing: 0.8px;
@@ -830,6 +846,103 @@ html.lenis body {
   visibility: visible;
 }
 
+.footer-wrap {
+  background: #032551;
+}
+.footer-wrap h2 {
+  color: #fff;
+  padding-bottom: 25px;
+}
+.footer-wrap p {
+  color: #fff;
+  font-family: "Arial", serif;
+}
+.footer-wrap .content-box {
+  max-width: 590px;
+  padding-right: 15px;
+}
+@media (max-width: 991px) {
+  .footer-wrap .content-box {
+    max-width: 100%;
+  }
+}
+.footer-wrap .footer-top .flex-wrap {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .footer-wrap .footer-top .flex-wrap {
+    flex-direction: column;
+  }
+}
+.footer-wrap .footer-top .flex-wrap > div {
+  width: 50%;
+}
+@media (max-width: 991px) {
+  .footer-wrap .footer-top .flex-wrap > div {
+    width: 100%;
+  }
+}
+.footer-wrap .footer-top .col-left {
+  position: relative;
+}
+.footer-wrap .footer-top .col-left .img-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+}
+.footer-wrap .footer-top .col-right {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .footer-wrap .footer-top .col-right .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50vw;
+  }
+}
+.footer-wrap .footer-top .col-right .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer-wrap .footer-bottom {
+  padding: clamp(20px, 1.6666666667vw, 32px) 0;
+}
+.footer-wrap .footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .footer-wrap .footer-bottom .container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
+.footer-wrap .footer-bottom .container > div {
+  font-size: 16px;
+  line-height: 1.3;
+  align-items: center;
+  padding: 0 clamp(20px, 4.1666666667vw, 80px);
+  color: #fff;
+  font-family: "Arial", serif;
+}
+.footer-wrap .footer-bottom .container > div sup {
+  font-size: 65%;
+}
+.footer-wrap .footer-bottom .container > div a {
+  color: currentColor;
+  transition: all 0.3s ease-in-out;
+}
+.footer-wrap .footer-bottom .container > div a:hover {
+  color: #f16521;
+}
+
 .hero-banner {
   min-height: 100vh;
   overflow: hidden;
@@ -873,7 +986,7 @@ html.lenis body {
 }
 .hero-banner .banner-info .banner-title {
   color: #fff;
-  font-family: "Arial Rounded MT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial Rounded MT", serif;
   text-transform: uppercase;
 }
 .hero-banner .banner-info p {
@@ -932,4 +1045,63 @@ html.lenis body {
   border-radius: 100px;
   margin: auto 0;
   background: currentColor;
+}
+
+.about-box {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: no-repeat center/cover;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .about-box {
+    flex-direction: column-reverse;
+  }
+}
+.about-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #70171b;
+  opacity: 0.95;
+  z-index: -1;
+}
+.about-box .col-left {
+  width: 100%;
+  padding: clamp(25px, 4.0104166667vw, 77px) clamp(20px, 4.6875vw, 90px);
+}
+.about-box .col-left .content-box {
+  position: relative;
+  z-index: 1;
+}
+.about-box .col-left .content-box p {
+  color: #fff;
+  line-height: 1.25;
+  font-family: "Arial", serif;
+}
+.about-box .col-right {
+  flex-shrink: 0;
+  width: 39.642%;
+  position: relative;
+  z-index: 9;
+}
+@media (max-width: 767px) {
+  .about-box .col-right {
+    width: 100%;
+  }
+}
+.about-box .about-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.about-box .about-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

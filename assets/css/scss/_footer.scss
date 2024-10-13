@@ -1,0 +1,89 @@
+.footer-wrap {
+  background: $secondary;
+  h2 {
+    color: $white;
+    padding-bottom: 25px;
+  }
+  p {
+    color: $white;
+    font-family: $font-arial;
+  }
+  .content-box {
+    max-width: 590px;
+    padding-right: 15px;
+    @include breakpoint(max, $media-md) {
+      max-width: 100%;
+    }
+  }
+  .footer-top {
+    .flex-wrap {
+      display: flex;
+      @include breakpoint(max, $media-md) {
+        flex-direction: column;
+      }
+      > div {
+        width: 50%;
+        @include breakpoint(max, $media-md) {
+          width: 100%;
+        }
+      }
+    }
+    .col-left {
+      position: relative;
+      .img-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50vw;
+      }
+    }
+    .col-right {
+      position: relative;
+      .img-box {
+        @include breakpoint(min, $media-md-min) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 50vw;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    padding: get-vw(20px, 32px) 0;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      @include breakpoint(max, $media-md) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+      }
+      > div {
+        font-size: 16px;
+        line-height: 1.3;
+        align-items: center;
+        padding: 0 get-vw(20px, 80px);
+        color: $white;
+        font-family: $font-arial;
+        sup {
+          font-size: 65%;
+        }
+        a {
+          color: currentColor;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
