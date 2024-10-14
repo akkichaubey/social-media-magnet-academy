@@ -1,0 +1,142 @@
+.shape {
+  span {
+    display: inline-block;
+  }
+  &--square {
+    width: 115px;
+    height: 128px;
+    border-radius: 16px;
+    &.sm {
+      width: 82px;
+      height: 89px;
+    }
+    &.stl-red {
+      background: rgba($red, 0.2);
+    }
+    &.stl-blue {
+      background: rgba($secondary, 0.1);
+    }
+  }
+  &--circle {
+    border-radius: 100%;
+    border: 3px solid transparent;
+    &.xl {
+      width: 215px;
+      height: 215px;
+    }
+    &.lg {
+      width: 156px;
+      height: 156px;
+    }
+    &.md {
+      width: 108px;
+      height: 108px;
+    }
+    &.sm {
+      width: 56px;
+      height: 56px;
+    }
+    &.xs {
+      width: 22px;
+      height: 22px;
+    }
+    &.outline-red {
+      border-color: $primary;
+    }
+    &.outline-blue {
+      border-color: $secondary;
+    }
+    &.fill-blue {
+      background: rgba($secondary, 0.1);
+    }
+    &.fill-red {
+      background: rgba($red, 0.1);
+    }
+  }
+}
+
+.service-wrap {
+  .title-wrap {
+    text-align: center;
+    padding-bottom: get-vw(25px, 57px);
+    h2 {
+      color: $secondary;
+      text-align: center;
+      font-family: $font-sans;
+      text-transform: uppercase;
+    }
+  }
+  .img-box {
+    overflow: hidden;
+    padding-bottom: 71%;
+  }
+  .content-box {
+    h3 {
+      color: $secondary;
+      font-family: $font-sans;
+      padding-bottom: 32px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      li {
+        font-family: $font-arial;
+        :is(strong, a) {
+          color: $red;
+        }
+      }
+    }
+  }
+  .column-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -47px;
+    > .col {
+      padding: 0 47px;
+      position: relative;
+      .shape-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .shape {
+          position: absolute;
+          &--stl-1 {
+            top: -55px;
+            left: 122px;
+          }
+          &--stl-2 {
+            right: 6px;
+            bottom: -47px;
+          }
+          &--stl-3 {
+            bottom: -53px;
+          }
+          &--stl-4 {
+            top: 29px;
+            right: 40%;
+          }
+        }
+      }
+      &--left {
+        width: 45.8%;
+      }
+      &--right {
+        width: 54.2%;
+      }
+    }
+  }
+  .inner-section {
+    &:not(:last-child) {
+      padding-bottom: get-vw(50px, 140px);
+    }
+    &:nth-child(odd) {
+      .column-wrap {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

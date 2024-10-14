@@ -185,17 +185,17 @@ button:focus {
 .bullet {
   ul {
     li {
-      padding-left: 30px;
+      padding-left: 32px;
       position: relative;
       &:before {
         content: "";
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         position: absolute;
         border-radius: 100%;
         left: 5px;
-        top: 12px;
-        background: $primary;
+        top: 10px;
+        background: $red;
       }
     }
   }
