@@ -1,0 +1,99 @@
+.choose {
+  background: no-repeat center / cover;
+  position: relative;
+  overflow: hidden;
+  color: $secondary;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    opacity: 0.9;
+    z-index: -1;
+  }
+  .water-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  .title-wrap {
+    text-align: center;
+    padding-bottom: get-vw(30px, 54px);
+    h2 {
+      color: $white;
+      text-transform: uppercase;
+      font-family: $font-sans;
+    }
+  }
+  .choose-list {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -20px;
+      row-gap: 30px;
+      @include breakpoint(max, $media-md) {
+        margin: 0 -15px;
+      }
+      li {
+        width: 33.3333%;
+        padding: 0 20px;
+        @include breakpoint(max, $media-md) {
+          padding: 0 15px;
+          width: 50%;
+        }
+        @include breakpoint(max, $media-xs) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &--red {
+    color: $red;
+  }
+}
+
+.choose-box {
+  height: 100%;
+  background: $white;
+  border-radius: 24px;
+  padding: get-vw(25px, 36px) get-vw(20px, 50px);
+  .choose-icon {
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 100%;
+    background: $white;
+    box-shadow: 8px 4px 35px rgba($black, 0.13);
+    @include breakpoint(max, $media-md) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  h3 {
+    color: $black;
+    font-family: $font-sans;
+    padding: get-vw(20px, 27px) 0 6px;
+    text-transform: uppercase;
+  }
+  p {
+    color: $black;
+    font-family: $font-arial;
+  }
+}
