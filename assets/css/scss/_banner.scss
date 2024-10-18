@@ -97,4 +97,17 @@
       }
     }
   }
+  &.hero-banner {
+    min-height: initial;
+    padding-bottom: 120px;
+    .banner-info {
+      .date-name {
+        font-size: 19px;
+        line-height: 1.333;
+        color: $white;
+        font-family: $font-sans;
+        padding-top: get-vw(20px, 28px);
+      }
+    }
+  }
 }
