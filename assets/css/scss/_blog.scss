@@ -76,6 +76,9 @@
       }
     }
   }
+  .wp-pagenavi {
+    @extend .pt-70;
+  }
 }
 
 .blog-single {

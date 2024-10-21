@@ -120,3 +120,27 @@
     }
   }
 }
+
+.wp-pagenavi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  :is(span, a) {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    line-height: 1;
+    min-width: 40px;
+    height: 40px;
+    border: 1px solid $dark-color !important;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    &:is(:hover, .current) {
+      color: $white;
+      background: $primary;
+      border-color: $primary !important;
+    }
+  }
+}
